@@ -5,7 +5,7 @@ const clientSchema = new Schema({
     username: String,
     bank: String,
     accNo: Number,
-    password: String   
+    password: String  
 })
 
 module.exports = model('clienttest', clientSchema);
