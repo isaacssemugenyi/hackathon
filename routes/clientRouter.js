@@ -6,6 +6,7 @@ const isAuth = require('../config/auth');
 
 // Importing models
 const Client = require('../models/clientModel');
+const Deposit = require('../models/depositModel')
 
 // Serve the login page
 router.get('/login', (req, res)=>{
@@ -18,8 +19,22 @@ router.get('/signup', (req, res)=>{
 })
 
 // Serve the client dashboard after logging in
-router.get('/dashboard', isAuth, (req, res)=>{
-    res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname)
+router.get('/dashboard', isAuth, async (req, res)=>{
+    try{
+        await Deposit.find({}, {reference : req.user.id}, (err, savings)=>{
+            let userDeposit;
+            if (savings === null || savings === "" || savings === []){
+              userDeposit = 0;
+            } else {
+              userDeposit = savings
+                                .map(saving => saving.amount)
+                                .reduce((total, amount) => total + amount, 0);
+            }
+           res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + userDeposit)
+        });
+    } catch(err){
+        console.log(err.message);
+    }
 })
 
 //handles creation of new client

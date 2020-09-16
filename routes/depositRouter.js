@@ -4,6 +4,7 @@ const isAuth = require('../config/auth');
 const isAllowed = require('../config/access')
 
 // Importing models
+const Client = require('../models/clientModel')
 const Deposit = require('../models/depositModel');
 
 //Access the page to add money to a savings scheme
@@ -14,7 +15,7 @@ router.get('/', isAuth, isAllowed, (req, res)=>{
 router.post('/', isAuth, isAllowed, async(req, res)=>{
     const deposit = new Deposit();
     deposit.amount = req.body.amount;
-    deposit.reference = req.user.accNo;
+    deposit.reference = req.user.id;
     deposit.createdAt = Date.now();
 
     try {
