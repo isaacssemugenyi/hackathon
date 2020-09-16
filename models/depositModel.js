@@ -1,13 +1,8 @@
 const { Schema, model } = require('mongoose');
 
 const depositSchema = new Schema({
-    amount: String,
-    reference: Schema.Types.ObjectId,
-    createdAt: {
-        type: String,
-        default: Date.now()
-    }
-    
+    amount: {type: Number, required: true },
+    createdAt: {type: String, required: true } 
 })
 
-module.exports = model('account', depositSchema);
+module.exports = model('deposit', depositSchema);
