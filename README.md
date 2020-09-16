@@ -16,7 +16,7 @@ GET: /client/login serves login page with the form
 
 GET: /client/signup serves the signup page for first time registration
 
-GET: /client/dashboard Displays the dashboard after logging in, displays the balance as well of the currently logged in user, if any
+GET: /client/dashboard Displays the dashboard after logging in, displays the balance (userDeposit) and (data carries the list of all deposits made by a particular account, put them in a table with amount and createdAt date) as well of the currently logged in user, if any
 
 POST: /client/signup Posts data for new signed up users
 
