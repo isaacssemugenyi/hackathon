@@ -10,11 +10,13 @@ const Deposit = require('../models/depositModel')
 
 // Serve the login page
 router.get('/login', (req, res)=>{
+    // res.render('login')
     res.send('Serves the login page for client already with an account')
 })
 
 // Serve the signup page
 router.get('/signup', (req, res)=>{
+    //res.render('signup')
     res.send('Serves the signup page for client on first visit');
 })
 
@@ -37,6 +39,14 @@ router.get('/dashboard', isAuth, async (req, res)=>{
             userDeposit = data.map(saved => parseInt(saved.amount))
                             .reduce((total, amount) => total + amount, 0);
             }
+            // uncomment this
+          /**res.render('dashboard', {
+           * total: parseInt(userDeposit), 
+           * deposits: data, 
+           * user: req.user.accNo, 
+           * name: req.user.fullname 
+           * }) 
+           * */
            res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + parseInt(userDeposit) +''+ data)
         });
     } catch(err){

@@ -9,6 +9,7 @@ const Deposit = require('../models/depositModel');
 
 //Access the page to add money to a savings scheme
 router.get('/', isAuth,  (req, res)=>{
+    // res.render('add_deposit')
     res.json('Serving the page with the serving form')
 })
 
