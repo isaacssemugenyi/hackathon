@@ -24,15 +24,20 @@ router.get('/dashboard', isAuth, async (req, res)=>{
         await Deposit.find({}, (err, savings)=>{
             // console.log('first', savings)
             let userDeposit;
+            let data;
             if (savings === null || savings === "" || savings === []){
               userDeposit = 0;
             } else {
-              userDeposit = savings
-                    .filter(saving => saving.reference === req.user.id)
-                    .map(saved => parseInt(saved.amount))
-                    .reduce((total, amount) => total + amount, 0);
+            //   userDeposit = savings
+            //         .filter(saving => saving.reference === req.user.id)
+            //         .map(saved => parseInt(saved.amount))
+            //         .reduce((total, amount) => total + amount, 0);
+
+            data = savings.filter(saving => saving.reference === req.user.id)
+            userDeposit = data.map(saved => parseInt(saved.amount))
+                            .reduce((total, amount) => total + amount, 0);
             }
-           res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + parseInt(userDeposit))
+           res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + parseInt(userDeposit) +''+ data)
         });
     } catch(err){
         console.log(err.message);
