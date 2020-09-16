@@ -21,16 +21,18 @@ router.get('/signup', (req, res)=>{
 // Serve the client dashboard after logging in
 router.get('/dashboard', isAuth, async (req, res)=>{
     try{
-        await Deposit.find({}, {reference : req.user.id}, (err, savings)=>{
+        await Deposit.find({}, (err, savings)=>{
+            // console.log('first', savings)
             let userDeposit;
             if (savings === null || savings === "" || savings === []){
               userDeposit = 0;
             } else {
               userDeposit = savings
-                                .map(saving => saving.amount)
-                                .reduce((total, amount) => total + amount, 0);
+                    .filter(saving => saving.reference === req.user.id)
+                    .map(saved => parseInt(saved.amount))
+                    .reduce((total, amount) => total + amount, 0);
             }
-           res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + userDeposit)
+           res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + parseInt(userDeposit))
         });
     } catch(err){
         console.log(err.message);

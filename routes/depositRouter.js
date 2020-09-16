@@ -1,18 +1,18 @@
 const router = require('express').Router();
 
 const isAuth = require('../config/auth');
-const isAllowed = require('../config/access')
+// const isAllowed = require('../config/access')
 
 // Importing models
 const Client = require('../models/clientModel')
 const Deposit = require('../models/depositModel');
 
 //Access the page to add money to a savings scheme
-router.get('/', isAuth, isAllowed, (req, res)=>{
+router.get('/', isAuth,  (req, res)=>{
     res.json('Serving the page with the serving form')
 })
 
-router.post('/', isAuth, isAllowed, async(req, res)=>{
+router.post('/', isAuth,  async(req, res)=>{
     const deposit = new Deposit();
     deposit.amount = req.body.amount;
     deposit.reference = req.user.id;
