@@ -10,14 +10,12 @@ const Deposit = require('../models/depositModel')
 
 // Serve the login page
 router.get('/login', (req, res)=>{
-    // res.render('login')
-    res.send('Serves the login page for client already with an account')
+    res.render('login')
 })
 
 // Serve the signup page
 router.get('/signup', (req, res)=>{
-    //res.render('signup')
-    res.send('Serves the signup page for client on first visit');
+    res.render('signup')
 })
 
 // Serve the client dashboard after logging in
@@ -40,14 +38,14 @@ router.get('/dashboard', isAuth, async (req, res)=>{
                             .reduce((total, amount) => total + amount, 0);
             }
             // uncomment this
-          /**res.render('dashboard', {
-           * total: parseInt(userDeposit), 
-           * deposits: data, 
-           * user: req.user.accNo, 
-           * name: req.user.fullname 
-           * }) 
-           * */
-           res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + parseInt(userDeposit) +''+ data)
+          res.render('dashboard', {
+            total: parseInt(userDeposit), 
+            deposits: data, 
+            user: req.user.accNo, 
+            name: req.user.fullname 
+         }) 
+           
+        //    res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + parseInt(userDeposit) +''+ data)
         });
     } catch(err){
         console.log(err.message);
@@ -62,6 +60,7 @@ router.post('/signup', async(req, res)=>{
     client.bank = req.body.bank;
     client.accNo = req.body.accNo;
     client.password = req.body.password;
+    client.mobile = req.body.mobile;
 
     try{
         await bcrypt.genSalt(10, (err, salt)=>{
@@ -99,7 +98,7 @@ router.post('/login', (req, res, next)=>{
 router.get('/logout', (req, res)=>{
     req.logout();
     req.flash('Success', 'You are logged out');
-    res.redirect('/client/login');
+    res.redirect('/');
 }) 
 
 module.exports = router;

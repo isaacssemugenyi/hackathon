@@ -9,7 +9,7 @@ http://localhost:6060
 => Located in defaultRoutes
 GET: / will serve the default index page (add the first page)
 
-GET: /services will serve the services(plans page)
+GET: /plan will serve the services(plans page)
 
 => Located in clientRoutes
 GET: /client/login serves login page with the form

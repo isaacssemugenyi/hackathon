@@ -10,9 +10,15 @@ const config = require('./config/db');
 
 const port = process.env.PORT || 6060;
 
+app.locals.moment = require('moment');
+
+// View engine
+app.set('view engine', 'pug');
+app.set('views', './views');
+
 // Middlewares
 app.use(express.json());
-// app.use(express.static(__dirname, 'public'));
+app.use(express.static(path.join(__dirname , 'public')));
 
 // Importing routes
 const defaultRoutes = require('./routes/defaultRouter')
