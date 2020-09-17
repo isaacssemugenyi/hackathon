@@ -1,8 +1,8 @@
 extends layout
 block content
   .row
-    .col-sm-4.login.justify-content-center
-      form.loginform(action="/client/login" method="POST")
+    .col-md-4.offset-md-4
+      form.mt-5.loginform(action="/client/login" method="POST")
         .form-group
           label(for='username') Username
           input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='username')
