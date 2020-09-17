@@ -25,7 +25,7 @@ head
               a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') Disabled
   .row
     .col-sm-4.login.justify-content-center
-      form(action="/client/login" method="POST")
+      form.loginform(action="/client/login" method="POST")
         .form-group
           label(for='username') Username
           input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='username')

@@ -57,6 +57,11 @@ head
     font-weight: bold;
     margin-top: 10px;
     }
+    .login{
+      background-color:#3493eb;
+      color: white;
+      border-radius:5px;
+    }
 .container-fluid
   .row
     .col-sm-12
@@ -80,7 +85,7 @@ head
     .col-sm-12(style='text-align: right;')
       a(href='/client/signup')
         button.col-sm-2.getstarted REGISTER
-      a.btn.btn-dark(href='/client/login' role="button") LOGIN
+      a.btn.login(href='/client/login' role="button" ) LOGIN
       
     .col-md-12
       .atm-card
@@ -110,43 +115,6 @@ head
           img.img-fluid.image-home.planimg(src='./images/health.jpg' alt='Responsive image')
           a(href='/plan')
             button.col-sm-12.getstarted HEALTH
-.footer
-  // Footer
-  footer.font-small.cyan.darken-3(style='background-color:#d9d0bd')
-    // Footer Elements
-    .container
-      // Grid row
-      .row
-        // Grid column
-        .col-md-12.py-5
-          .mb-5.flex-center
-            // Facebook
-            a.fb-ic
-              i.fab.fa-facebook-f.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-            // Twitter
-            a.tw-ic
-              i.fab.fa-twitter.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-            // Google +
-            a.gplus-ic
-              i.fab.fa-google-plus-g.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-            // Linkedin
-            a.li-ic
-              i.fab.fa-linkedin-in.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-            // Instagram
-            a.ins-ic
-              i.fab.fa-instagram.fa-lg.white-text.mr-md-5.mr-3.fa-2x  
-            // Pinterest
-            a.pin-ic
-              i.fab.fa-pinterest.fa-lg.white-text.fa-2x  
-        // Grid column
-      // Grid row
-    // Footer Elements
-    // Copyright
-    .footer-copyright.text-center.py-3
-      | &copy; 2020 Copyright:
-      a(href='https://mdbootstrap.com/')  MDBootstrap.com
-    // Copyright
-  // Footer
 script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
 script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js' integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN' crossorigin='anonymous')
 script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
