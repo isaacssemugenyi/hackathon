@@ -1,0 +1,13 @@
+nav.navbar.navbar-expand-lg.navbar-dark(style='background-color:#3493eb')
+    a.navbar-brand(href='#') Navbar
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    #navbarNavAltMarkup.collapse.navbar-collapse
+        .navbar-nav
+            a.nav-link.active(href='#') Home 
+                i.fas.fa-home
+            a.nav-link.active(href='#') Terms and conditions
+            a.nav-link.active(href='#') Services
+                i.fas.fa-sign-in-alt
+            if user
+                a.float-right(style='background-color: white; border-radius: 12px; padding: 10px 20px; color:#3493eb ;' href="/client/logout") Logout

@@ -1,0 +1,44 @@
+extends layout
+block content
+  .row
+      .col-md-8.offset-md-2
+        form.my-4(action="/client/signup" method="POST")
+          h3.text-center Client SignUp Form
+          fieldset.mb-2
+            div.form-row
+              div.form-group.col-md-6
+                label(for="fullname") Fullname
+                input.form-control#fullname(type="text" name="fullname")
+
+              div.form-group.col-md-6
+                label(for="username") Username
+                input.form-control#username(type="text" name="username")
+
+            div.form-row
+              div.form-group.col-md-6
+                label(for="bank") Banking provider
+                input.form-control#bank(type="text" name="bank")
+
+              div.form-group.col-md-6
+                label(for="accNo") Account No.
+                input.form-control#accNo(type="number" name="accNo")
+
+            div.form-row
+              div.form-group.col-md-4
+                label(for="mobile") Phone Number
+                input.form-control#phone(type="number" name="mobile")
+
+              div.form-group.col-md-2
+                label(for="mobile") Select Gender
+                select.form-control#gender(type="text" name="gender")
+                  option(value="Female") Female
+                  option(value="Male") Male
+                  option(value="Other") Other
+
+              div.form-group.col-md-6
+                label(for="password") Password
+                input.form-control#phone(type="text" name="password")
+                               
+          button(type="submit").btn.btn-block Sign Up
+            
+            //- End Sales Registration form

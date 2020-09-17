@@ -1,0 +1,219 @@
+/* Last Css */
+    .sidebar a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 500px;
+    font-size: 20px;
+    overflow-x: hidden;
+    }
+    .sidebar a:hover {
+    margin-left: 10px;
+    transition: all 0.2s linear;
+    text-decoration: none;
+    color: white;
+    }
+    .sidebar ul {
+    list-style: none;
+    }
+    .sidebar {
+    background-color: #3493eb;
+    color: white;
+    }
+
+
+
+/* Dashboard */
+
+.homediv{
+    border: #0366fc 2px solid;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 20px;
+    color: #0366fc;
+    }
+    .getstarted{
+    background-color: #0366fc;
+    width: 100%;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding:10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-div{
+    background-color: #0366fc;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding:10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-home{
+    width: 100%;
+    }
+    .login{
+    border:#0366fc solid 2px;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 40px;
+    color: #0366fc;
+    }
+    .planimg{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    border: #0366fc solid 5px;
+    }
+    #bankpay{
+    display:none;
+    }
+
+    /* Deposit */
+    .homediv{
+    border: #0366fc 2px solid;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 20px;
+    color: #0366fc;
+    }
+    .getstarted{
+    background-color: #0366fc;
+    width: 100%;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding:10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-div{
+    background-color: #0366fc;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding:10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-home{
+    width: 100%;
+    }
+    .login{
+    border:#0366fc solid 2px;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 40px;
+    color: #0366fc;
+    }
+    .planimg{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    border: #0366fc solid 5px;
+    }
+    #bankpay{
+    display:none;
+    }
+
+    /* index */
+    .homediv {
+    border: #0366fc 2px solid;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 20px;
+    color: #0366fc;
+    }
+    .getstarted {
+    background-color: #0366fc;
+    width: 100%;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-div {
+    background-color: #0366fc;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-home {
+    width: 500px;
+    }
+
+    /* login */
+
+    .homediv {
+    border: #0366fc 2px solid;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 20px;
+    color: #0366fc;
+    }
+    .getstarted {
+    background-color: #0366fc;
+    width: 100%;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-div {
+    background-color: #0366fc;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-home {
+    width: 100%;
+    }
+    .login {
+    border: #0366fc solid 2px;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 40px;
+    color: #0366fc;
+    }
+
+    /* signup */
+    .homediv {
+    border: #0366fc 2px solid;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 20px;
+    color: #0366fc;
+    }
+    .getstarted {
+    background-color: #0366fc;
+    width: 100%;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-div {
+    background-color: #0366fc;
+    color: #ffffff;
+    border: #0366fc 1px solid;
+    padding: 10px;
+    border-radius: 12px;
+    margin-top: 20px;
+    }
+    .image-home {
+    width: 100%;
+    }
+    .login {
+    border: #0366fc solid 2px;
+    margin-top: 50px;
+    border-radius: 20px;
+    padding: 40px;
+    color: #0366fc;
+    }
