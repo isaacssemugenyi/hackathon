@@ -69,4 +69,14 @@
     justify-content: center;
   }
   
+
+  .msg {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    width: 30%;
+    color: orange;
+    font-size:1.5rem;
+    z-index: 100;
+  }
   

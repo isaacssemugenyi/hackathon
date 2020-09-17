@@ -63,7 +63,6 @@ app.get('*', (req, res, next)=>{
   next();
 })
 
-
 app.use('/', defaultRoutes)
 app.use('/client', clientRoutes)
 app.use('/deposit', depositRoutes)

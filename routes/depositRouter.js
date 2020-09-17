@@ -33,13 +33,16 @@ router.post('/', isAuth,  async(req, res)=>{
     })
     if(postReq.status === 200){
         await deposit.save();
+        req.flash('success', 'Successfully saved');
         res.redirect('/client/dashboard');
-    } else{
-        req.flash('Was unable to save data');
-        res.redirect('/client/dashboard');
-    }   
+    }// } else{
+    //     req.flash('Was unable to save data');
+    //     res.redirect('/client/dashboard');
+    // }   
     } catch(err){
-        throw new Error(err.message)
+        req.flash('error','Unable to connect to mojaloop')
+        res.redirect('/client/dashboard');
+        // throw new Error(err.message)
     }
 })
 
