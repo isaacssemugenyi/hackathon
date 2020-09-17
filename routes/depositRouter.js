@@ -7,8 +7,11 @@ const isAuth = require('../config/auth');
 //
 
 // Importing models
-const Client = require('../models/clientModel')
+//const Client = require('../models/clientModel')
 const Deposit = require('../models/depositModel');
+
+// nodemailer
+const { emailSending } = require('../config/email')
 
 //Access the page to add money to a savings scheme
 router.get('/', isAuth,  (req, res)=>{
@@ -34,6 +37,7 @@ router.post('/', isAuth,  async(req, res)=>{
         "homeTransactionId": "{{$guid}}"
     })
     if(postReq.status === 200){
+        emailSending(req.user.email, req.user.accNo, `You have a deposit of ${req.body.amount} at ${Date.now()}`);
         await deposit.save();
         req.flash('success', 'Successfully saved');
         res.redirect('/client/dashboard');

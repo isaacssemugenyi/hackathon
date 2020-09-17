@@ -8,6 +8,9 @@ const isAuth = require('../config/auth');
 const Client = require('../models/clientModel');
 const Deposit = require('../models/depositModel')
 
+// nodemailer
+const { emailSending } = require('../config/email');
+
 // Serve the login page
 router.get('/login', (req, res)=>{
     res.render('login')
@@ -57,10 +60,12 @@ router.post('/signup', async(req, res)=>{
     const client = new Client();
     client.fullname = req.body.fullname;
     client.username = req.body.username;
+    client.email = req.body.email;
     client.bank = req.body.bank;
     client.accNo = req.body.accNo;
     client.password = req.body.password;
     client.mobile = req.body.mobile;
+    client.gender = req.body.gender;
 
     try{
         await bcrypt.genSalt(10, (err, salt)=>{
@@ -68,6 +73,7 @@ router.post('/signup', async(req, res)=>{
                 if(error){ console.log(error)
                 } else {
                     client.password = hash;
+                    emailSending(req.body.email, req.body.fullname, `You have signed up ${req.body.fullname}`);
                     client.save((err)=>{
                         if(err) {
                             console.log(err);

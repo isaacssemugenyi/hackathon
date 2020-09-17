@@ -7,13 +7,17 @@ block content
         h3.text-center Client SignUp Form
         fieldset.mb-2
           div.form-row
-            div.form-group.col-md-6
+            div.form-group.col-md-4
               label(for="fullname") Fullname
               input.form-control#fullname(type="text" name="fullname")
 
-            div.form-group.col-md-6
+            div.form-group.col-md-4
               label(for="username") Username
               input.form-control#username(type="text" name="username")
+            
+            div.form-group.col-md-4
+              label(for="email") Email
+              input.form-control#email(type="email" name="email")
 
           div.form-row
             div.form-group.col-md-6
@@ -30,7 +34,7 @@ block content
               input.form-control#phone(type="number" name="mobile")
 
             div.form-group.col-md-2
-              label(for="mobile") Select Gender
+              label(for="mobile") Gender
               select.form-control#gender(type="text" name="gender")
                 option(value="Female") Female
                 option(value="Male") Male
