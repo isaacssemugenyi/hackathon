@@ -1,12 +1,14 @@
 nav.navbar.navbar-expand-lg.navbar-dark(style='background-color:#3493eb')
-    a.navbar-brand(href='/') Navbar
+    a.navbar-brand(href='/') OS Save
     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
     #navbarNavAltMarkup.collapse.navbar-collapse
         .navbar-nav
             a.nav-link.active(href='/') Home 
+            if user
+                a.nav-link.active(href='/client/dashboard') Dashboard
             a.nav-link.active(href='/develop') Terms and conditions
             a.nav-link.active(href='/develop') Services
                 i.fas.fa-sign-in-alt
-            if user
-                a(style='background-color: white; border-radius: 12px; padding: 10px 20px; color:#3493eb ;' href="/client/logout") Logout
+        if user
+            a.ml-auto(style='background-color: white; border-radius: 12px; padding: 10px 20px; color:#3493eb ;' href="/client/logout") Logout

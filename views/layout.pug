@@ -17,7 +17,7 @@ body
     div.msg
         != messages('message', locals)
     .container-fluid
-        .row
+        .row(style="min-height: 80vh;")
             if user 
                 include includes/sidebar
 
