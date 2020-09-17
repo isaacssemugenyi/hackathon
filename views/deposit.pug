@@ -5,25 +5,8 @@ head
   title OS Save App
   link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
   
+include includes/navbar 
 .container-fluid
-  .row
-    .col-sm-12
-      nav.navbar.navbar-expand-lg.navbar-dark(style='background-color: #0366fc; height: 100%;')
-        a.navbar-brand(href='#') Navbar
-        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarNav.collapse.navbar-collapse
-          ul.navbar-nav
-            li.nav-item.active
-              a.nav-link(href='#')
-                | Home 
-                span.sr-only (current)
-            li.nav-item
-              a.nav-link(href='#') Features
-            li.nav-item
-              a.nav-link(href='#') Pricing
-            li.nav-item
-              a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') Disabled
   .row
     .col-sm-12.login
       .col-sm-12.d-flex.justify-content-around
@@ -56,4 +39,4 @@ head
               .form-group
                 label(for='exampleInputPassword1') Amount
                 input#exampleInputPassword1.form-control(type='number')
-              button.btn.btn-primary.col-sm-12.bank-transfer-btn(type='submit') Transfer
+                button.btn.btn-primary.col-sm-12.bank-transfer-btn(type='submit') Transfer
