@@ -6,7 +6,7 @@ module.exports.emailSending = async function(user, topic, message){
         service: 'gmail', 
         auth: { 
             user: 'ossaveapp@gmail.com', 
-            pass: 'password'
+            pass: 'eva2020hack'
         },
         tls: {
             rejectUnauthorized: false

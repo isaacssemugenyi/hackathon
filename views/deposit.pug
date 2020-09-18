@@ -10,33 +10,29 @@ include includes/navbar
   .row
     .col-sm-12.login
       .col-sm-12.d-flex.justify-content-around
-        .col-sm-6
-          img.img-fluid.image-home.planimg(src='./images/bank.png' alt='Responsive image')
-          a(href='#')
-            button#selectpay.col-sm-4.getstarted Bank
-          #bankpay.col-sm-6.login.justify-content-center
-            form(method='POST' action='/deposit')
-              .form-group
-                label(for='amount') Amount
-                input#bamount.form-control(type='number' name="amount")
-              button#bank-transfer-btn.btn.btn-primary.col-sm-12(onclick='bnotification()' type='submit') Transfer
-        .col-sm-6
-          img.img-fluid.image-home.planimg(src='./images/mobilepay.jpg' alt='Responsive image')
-          a(href='plan.html')
-            button.col-sm-4.getstarted Mobile Money
-          .col-sm-6.login.justify-content-center
-            form(method='POST' action='deposit')
-              .form-group
-                label(for='exampleFormControlSelect1') Select your Service Provider
-                select#exampleFormControlSelect1.form-control(name='isp')
-                  option Select...
-                  option MTN
-                  option AIRTEL
-                  option AFRICELL
-              .form-group
-                label(for='exampleInputEmail1') Mobile No.
-                input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='username')
-              .form-group
-                label(for='exampleInputPassword1') Amount
-                input#mamount.form-control(type='number')
+        .col-sm-6.mt-5
+          div.p-4(style="border:2px solid blue; display:inline-block; border-radius: 12px;")
+            img.img-fluid.image-home.planimg(src='./images/bank.png' alt='Responsive image')
+            #bankpay.col-md-12.login.justify-content-center
+              form(method='POST' action='/deposit')
+                .form-group
+                  label(for='amount') Amount
+                  input#bamount.form-control(type='number' name="amount")
+                .form-group
+                  label(for='pin') Pin
+                  input#pin.form-control(type='password' name="pin")
+                br
+                button#bank-transfer-btn.btn.btn-primary.col-sm-12(onclick='bnotification();' type='submit') Transfer
+        .col-sm-6.mt-5
+          div.p-4(style="border:2px solid blue; display:inline-block; border-radius: 12px;")
+            img.img-fluid.image-home.planimg(src='./images/mobilepay.jpg' alt='Responsive image')
+            .col-md-12.login.justify-content-center
+              form(method='POST' action='deposit')
+                .form-group
+                  label(for='mm_amount') Amount
+                  input#exampleInputEmail1.form-control(type='number' aria-describedby='emailHelp' name='mm_amount')
+                .form-group
+                  label(for='exampleInputPassword1') Pin
+                  input#mamount.form-control(type='password')
+                br
                 button.btn.btn-primary.col-sm-12.bank-transfer-btn(onclick='bnotification()' type='submit') Transfer

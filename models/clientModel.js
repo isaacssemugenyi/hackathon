@@ -11,4 +11,4 @@ const clientSchema = new Schema({
     gender: String
 })
 
-module.exports = model('clienttest', clientSchema);
+module.exports = model('client', clientSchema);
