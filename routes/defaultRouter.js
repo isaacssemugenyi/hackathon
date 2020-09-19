@@ -10,4 +10,9 @@ router.get('/plan', (req, res)=>{
     res.render('plan')
 })
 
+// Under development route
+router.get('/develop', (req, res)=>{
+    res.render('develop')
+})
+
 module.exports = router;

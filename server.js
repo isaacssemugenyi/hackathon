@@ -69,5 +69,5 @@ app.use('/deposit', depositRoutes)
 
 //Handle missing routes
 app.get('*', (req, res)=>{
-    res.send('Page does not exist');
+    res.render('error');
   })

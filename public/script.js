@@ -14,7 +14,7 @@ function bnotification() {
   let amount = document.getElementById("bamount").value;
   //   alert(`transfer shs ${amount} from ${bank}`)
   if (amount.length !== "") {
-    confirm(`You are about to make a deposit of ${amount}, Are you sure?`);
+   return confirm(`You are about to make a deposit of ${amount} EUR, Are you sure?`);
   }
 }
 
