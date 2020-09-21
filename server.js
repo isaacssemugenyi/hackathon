@@ -8,7 +8,7 @@ const app = express();
 
 const config = require('./config/db');
 
-const port = process.env.PORT || 6060;
+const port = process.env.PORT || 3000;
 
 app.locals.moment = require('moment');
 
@@ -30,10 +30,12 @@ mongoose.connect(config.database, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }
-).then(once => {
+)
+.then(once => {
     console.log('Connected to DB')
     app.listen(port, ()=> console.log(`Server running on port ${port}`))
-}).catch(err => console.log(err.message))
+})
+.catch(err => console.log(err.message))
 
 app.use(express.static(path.join(__dirname , 'public'))); //Using static files
 app.use(express.urlencoded({extended: true})) // Accessing form data
