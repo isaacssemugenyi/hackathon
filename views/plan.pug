@@ -1,104 +1,104 @@
 doctype html
 head
-  meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Document
-  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' integrity='sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z' crossorigin='anonymous')
-  link(rel="stylesheet", href="/card.css")
-  style.
-    body{
-    padding: 0;
-    margin: 0;
-    }
-    .homediv{
-    border: #3493eb 2px solid;
-    border-radius: 12px;
-    width: 100%;
-    margin-top: 10px;
-    color: #3493eb;
-    }
-    .getstarted{
-    background-color: #3493eb;
-    width: 100%;
-    color: #ffffff;
-    border: #3493eb 1px solid;
-    padding:10px;
-    border-radius: 12px;
-    margin-top: 10px;
-    }
-    .getstarted:hover{
-    box-shadow:  5px 10px #77dae6;
-    transition: 1s;
-    }
-    .image-div{
-    background-color: #3493eb;
-    color: #ffffff;
-    border: #3493eb 1px solid;
-    padding:10px;
-    border-radius: 12px;
-    margin-top: 10px;
-    }
-    .image-home{
-    width: 100%;
-    }
-    .plans{
-    margin-top: 100px;
-    }
-    .planimg{
-    width:200px;
-    height:200px;
-    border-radius: 50%;
-    border: #3493eb solid 5px;
-    }
-    .plans-offered{
-    text-align: center;
-    color: #3493eb;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 10px;
-    }
-    .login{
-      background-color:#3493eb;
-      color: white;
-      border-radius:5px;
-    }
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet' href='/css/bootstrap.min.css')
+    link(rel="stylesheet" href="/card.css")
+    style.
+        body{
+        padding: 0;
+        margin: 0;
+        }
+        .homediv{
+        border: #3493eb 2px solid;
+        border-radius: 12px;
+        width: 100%;
+        margin-top: 10px;
+        color: #3493eb;
+        }
+        .getstarted{
+        background-color: #3493eb;
+        width: 100%;
+        color: #ffffff;
+        border: #3493eb 1px solid;
+        padding:10px;
+        border-radius: 12px;
+        margin-top: 10px;
+        }
+        .getstarted:hover{
+        box-shadow:  5px 10px #77dae6;
+        transition: 1s;
+        }
+        .image-div{
+        background-color: #3493eb;
+        color: #ffffff;
+        border: #3493eb 1px solid;
+        padding:10px;
+        border-radius: 12px;
+        margin-top: 10px;
+        }
+        .image-home{
+        width: 100%;
+        }
+        .plans{
+        margin-top: 100px;
+        }
+        .planimg{
+        width:200px;
+        height:200px;
+        border-radius: 50%;
+        border: #3493eb solid 5px;
+        }
+        .plans-offered{
+        text-align: center;
+        color: #3493eb;
+        font-size: 25px;
+        font-weight: bold;
+        margin-top: 10px;
+        }
+        .login{
+            background-color:#3493eb;
+            color: white;
+            border-radius:5px;
+        }
 
 include includes/navbar
 .container-fluid
-  .row
-    .col-sm-12(style='text-align: right;')
-      a(href='/client/signup')
-        button.col-sm-2.getstarted REGISTER
-      a.btn.login(href='/client/login' role="button" ) LOGIN
-      
-    .col-md-12
-      //- .atm-card
-      //-   div.element
-      //-     h4#time Team Time
-      //-     div#stripe
-      //-       h4 56940630690695
-      //-     h5 Tusiime 
+    .row
+        .col-sm-12(style='text-align: right;')
+            a(href='/client/signup')
+                button.col-sm-2.getstarted REGISTER
+            a.btn.login(href='/client/login' role="button" ) LOGIN
 
-      .row
-        .col-md-12.plans-offered
-          | OUR PLANS
-      .row.d-flex.justify-content-around
-        .col-sm-2.plans.mx-auto
-          img.img-fluid.image-home.planimg(src='./images/educ.jpg' alt='Responsive image')
-          a(href='/plan')
-            button.col-sm-12.getstarted SCHOOLFEES
-        .col-sm-2.plans.mx-auto
-          img.img-fluid.image-home.planimg(src='./images/shopping.jpg' alt='Responsive image')
-          a(href='/plan')
-            button.col-sm-12.getstarted SHOPPING
-        .col-sm-2.plans.mx-auto
-          img.img-fluid.image-home.planimg(src='./images/money-coins-finance-cash-savings-pay-buy-loan-wealth.jpg' alt='Responsive image')
-          a(href='/plan')
-            button.col-sm-12.getstarted LOANS &amp; SAVINGS
-        .col-sm-2.plans.mx-auto
-          img.img-fluid.image-home.planimg(src='./images/health.jpg' alt='Responsive image')
-          a(href='/plan')
-            button.col-sm-12.getstarted HEALTH
-script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
-script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js' integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN' crossorigin='anonymous')
-script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' integrity='sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV' crossorigin='anonymous')
+        .col-md-12
+            //- .atm-card
+            //-   div.element
+            //-     h4#time Team Time
+            //-     div#stripe
+            //-       h4 56940630690695
+            //-     h5 Tusiime 
+
+            .row
+                .col-md-12.plans-offered
+                    | OUR PLANS
+            .row.d-flex.justify-content-around
+                .col-sm-2.plans.mx-auto
+                    img.img-fluid.image-home.planimg(src='./images/educ.jpg' alt='Responsive image')
+                    a(href='/plan')
+                        button.col-sm-12.getstarted SCHOOLFEES
+                .col-sm-2.plans.mx-auto
+                    img.img-fluid.image-home.planimg(src='./images/shopping.jpg' alt='Responsive image')
+                    a(href='/plan')
+                        button.col-sm-12.getstarted SHOPPING
+                .col-sm-2.plans.mx-auto
+                    img.img-fluid.image-home.planimg(src='./images/money-coins-finance-cash-savings-pay-buy-loan-wealth.jpg' alt='Responsive image')
+                    a(href='/plan')
+                        button.col-sm-12.getstarted LOANS &amp; SAVINGS
+                .col-sm-2.plans.mx-auto
+                    img.img-fluid.image-home.planimg(src='./images/health.jpg' alt='Responsive image')
+                    a(href='/plan')
+                        button.col-sm-12.getstarted HEALTH
+script(src='/js/jquery-3.5.1.slim.min.js')
+script(src='/js/popper.min.js')
+script(src='/js/bootstrap.min.js')
