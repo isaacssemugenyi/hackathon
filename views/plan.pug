@@ -1,18 +1,10 @@
-doctype html
-head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title Document
-    link(rel='stylesheet' href='/css/bootstrap.min.css')
-    link(rel="stylesheet" href="/styles.css")
-    link(rel="stylesheet" href="/card.css")
-include includes/navbar
-.container-fluid
+extends layout
+block content
     .row
         .col-sm-12(style='text-align: right;')
             a(href='/client/signup')
                 button.col-sm-2.getstarted REGISTER
-            a.btn.login(href='/client/login' role="button" ) LOGIN
+            a.btn.login(href='/client/login' role="button") LOGIN
 
         .col-md-12
 
@@ -36,7 +28,3 @@ include includes/navbar
                     img.img-fluid.image-home.planimg(src='./images/health.jpg' alt='Responsive image')
                     a(href='/plan')
                         button.col-sm-12.getstarted HEALTH
-
-    script(src='/js/jquery-3.5.1.slim.min.js')
-    script(src='/js/popper.min.js')
-    script(src='/js/bootstrap.min.js')

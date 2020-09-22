@@ -1,13 +1,13 @@
 extends layout
 block content
-  .row
-    .col-md-4.offset-md-4
-      form.mt-5.loginform(action="/client/login" method="POST")
-        .form-group
-          label(for='username') Username
-          input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='username')
-        .form-group
-          label(for='password') Password
-          input#exampleInputPassword1.form-control(type='password' name='password')
+    .row
+        .col-md-4.offset-md-4
+            form.mt-5.loginform(action="/client/login" method="POST")
+                .form-group
+                    label(for='username') Username
+                    input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' name='username')
+                .form-group
+                    label(for='password') Password
+                    input#exampleInputPassword1.form-control(type='password' name='password')
 
-        button.btn.btn-primary.col-sm-12(type='submit') Login
+                button.btn.btn-primary.col-sm-12(type='submit') Login
