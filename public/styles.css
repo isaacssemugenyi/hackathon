@@ -238,7 +238,7 @@ div.p-4 {
 h4 span {
   color: #3493eb;
 }
-tr {
+thead tr {
   background-color: #3493eb;
   color: white;
 }
