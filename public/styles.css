@@ -22,11 +22,7 @@ body {
   border: #3493eb 1px solid;
   padding: 10px;
   border-radius: 12px;
-  margin-top: 10px;
-}
-.getstarted:hover {
-  box-shadow: 5px 10px #77dae6;
-  transition: 1s;
+  margin-top: 20px;
 }
 .image-div {
   background-color: #3493eb;
@@ -94,15 +90,6 @@ body {
   margin-top: 20px;
   color: #3493eb;
 }
-.getstarted {
-  background-color: #3493eb;
-  width: 100%;
-  color: #ffffff;
-  border: #3493eb 1px solid;
-  padding: 10px;
-  border-radius: 12px;
-  margin-top: 20px;
-}
 .image-div {
   background-color: #3493eb;
   color: #ffffff;
@@ -135,15 +122,6 @@ body {
   width: 100%;
   margin-top: 20px;
   color: #3493eb;
-}
-.getstarted {
-  background-color: #3493eb;
-  width: 100%;
-  color: #ffffff;
-  border: #3493eb 1px solid;
-  padding: 10px;
-  border-radius: 12px;
-  margin-top: 20px;
 }
 .image-div {
   background-color: #3493eb;
@@ -178,15 +156,6 @@ body {
   margin-top: 20px;
   color: #3493eb;
 }
-.getstarted {
-  background-color: #3493eb;
-  width: 100%;
-  color: #ffffff;
-  border: #3493eb 1px solid;
-  padding: 10px;
-  border-radius: 12px;
-  margin-top: 20px;
-}
 .image-div {
   background-color: #3493eb;
   color: #ffffff;
@@ -207,15 +176,6 @@ body {
   width: 100%;
   margin-top: 20px;
   color: #3493eb;
-}
-.getstarted {
-  background-color: #3493eb;
-  width: 100%;
-  color: #ffffff;
-  border: #3493eb 1px solid;
-  padding: 10px;
-  border-radius: 12px;
-  margin-top: 20px;
 }
 .image-div {
   background-color: #3493eb;
@@ -243,15 +203,6 @@ body {
   width: 100%;
   margin-top: 20px;
   color: #3493eb;
-}
-.getstarted {
-  background-color: #3493eb;
-  width: 100%;
-  color: #ffffff;
-  border: #3493eb 1px solid;
-  padding: 10px;
-  border-radius: 12px;
-  margin-top: 20px;
 }
 .image-div {
   background-color: #3493eb;
