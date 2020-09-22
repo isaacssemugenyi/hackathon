@@ -297,3 +297,23 @@ tr {
   background-color: #3493eb;
   color: white;
 }
+
+/* Navbar */
+nav.navbar.navbar-expand-lg.navbar-dark {
+  background-color: #3493eb;
+}
+a.ml-auto {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: #3493eb;
+}
+
+/* Footer */
+p.text-light {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+hr {
+  background: #eb612a;
+}
