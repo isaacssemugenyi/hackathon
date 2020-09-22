@@ -1,12 +1,12 @@
 extends layout
 block content
     .row
-        .col-sm-12.login
-            .col-sm-12.d-flex.justify-content-around
+        .col-sm-12
+            .col-sm-10.d-flex.justify-content-around
                 .col-sm-6.mt-5
                     div.p-4
                         img.img-fluid.image-home.planimg(src='./images/bank.png' alt='Responsive image')
-                        #bankpay.col-md-12.login.justify-content-center
+                        .col-md-12.justify-content-center
                             form(method='POST' action='/deposit')
                                 .form-group
                                     label(for='amount') Amount
@@ -15,11 +15,11 @@ block content
                                     label(for='pin') Pin
                                     input#pin.form-control(type='password' name="pin")
                                 br
-                                button#bank-transfer-btn.btn.btn-primary.col-sm-12(onclick='bnotification();' type='submit') Transfer
+                                button.btn.btn-primary.col-sm-12.bank-transfer-btn(onclick='bnotification();' type='submit') Transfer
                 .col-sm-6.mt-5
                     div.p-4
                         img.img-fluid.image-home.planimg(src='./images/mobilepay.jpg' alt='Responsive image')
-                        .col-md-12.login.justify-content-center
+                        .col-md-12.justify-content-center
                             form(method='POST' action='deposit')
                                 .form-group
                                     label(for='mm_amount') Amount

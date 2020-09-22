@@ -127,9 +127,6 @@ body {
   border-radius: 50%;
   border: #3493eb solid 5px;
 }
-#bankpay {
-  display: none;
-}
 
 /* Deposit */
 .homediv {
@@ -171,9 +168,6 @@ body {
   height: 200px;
   border-radius: 50%;
   border: #3493eb solid 5px;
-}
-#bankpay {
-  display: none;
 }
 
 /* index */
@@ -317,3 +311,6 @@ p.text-light {
 hr {
   background: #eb612a;
 }
+/* .col-sm-12.d-flex.justify-content-around{
+    padding: 10;
+} */
