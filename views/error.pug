@@ -1,13 +1,6 @@
-doctype html
-html
-    head
-        title OS Save App
-        meta(charset='UTF-8')
-        meta(name='viewport' content='width=device-width, initial-scale=1.0')
-        link(rel='stylesheet' href='/css/bootstrap.min.css')
-    body
-        .container
-            .row
-                .col-md-8.offset-md-2.mt-5.pt-5
-                    h1 404 | Resource Not Found
-                    a(href="/" style="font-size:1.4rem;").btn.btn-outline-primary.btn-block.mt-5.p-3 Home
+extends layout
+block content
+    .row
+        .col-md-8.offset-md-2.mt-5.pt-5
+            h1 404 | Resource Not Found
+            a(href="/").btn.btn-outline-primary.btn-block.mt-5.p-3 Home
