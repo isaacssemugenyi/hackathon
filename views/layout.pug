@@ -16,9 +16,11 @@ body
         .row.main
             if user 
                 include includes/sidebar
-
-            .col-md-10
-                block content
+                .col-md-10
+                    block content
+            else
+                .col-md-12
+                    block content
 
     include includes/footer
 
