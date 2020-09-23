@@ -10,13 +10,13 @@ block content
                 thead
                     tr
                         th Date Deposited
-                            br
-                            span (yy-mm-dd-hh)
+                        th Time
                         th Amount (EUR)
 
                     tbody
                         each deposit in deposits
                             tr
-                                td #{moment(deposit.createdAt).format("YYYY-MM-DD")}
+                                td #{moment(deposit.createdAt).format("DD-MM-YYYY")}
+                                td #{moment(deposit.createdAt).format("hh:MM A")}
                                 td= deposit.amount
 
