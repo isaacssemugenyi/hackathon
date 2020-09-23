@@ -253,6 +253,10 @@ a.ml-auto {
   padding: 10px 20px;
   color: #3493eb;
 }
+a.nav-link.ml-auto {
+  background-color: #3493eb;
+  color: aliceblue;
+}
 
 /* Footer */
 p.text-light {
