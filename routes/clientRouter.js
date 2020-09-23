@@ -13,12 +13,12 @@ const { emailSending } = require('../config/email');
 
 // Serve the login page
 router.get('/login', (req, res)=>{
-    res.render('login')
+    res.render('login', {page: 'Login'})
 })
 
 // Serve the signup page
 router.get('/signup', (req, res)=>{
-    res.render('signup')
+    res.render('signup', {page: 'Sign Up'})
 })
 
 // Serve the client dashboard after logging in
@@ -45,7 +45,8 @@ router.get('/dashboard', isAuth, async (req, res)=>{
             total: parseInt(userDeposit), 
             deposits: data, 
             user: req.user.accNo, 
-            name: req.user.fullname 
+            name: req.user.fullname,
+            page: 'Dashboard' 
          }) 
            
         //    res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + parseInt(userDeposit) +''+ data)

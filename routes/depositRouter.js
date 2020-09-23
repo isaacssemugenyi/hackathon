@@ -15,7 +15,7 @@ const { emailSending } = require('../config/email')
 
 //Access the page to add money to a savings scheme
 router.get('/', isAuth,  (req, res)=>{
-    res.render('deposit')
+    res.render('deposit', {page: 'Deposit'})
 })
 
 router.post('/', isAuth,  async(req, res)=>{
