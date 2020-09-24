@@ -52,6 +52,7 @@ router.get('/dashboard', isAuth, async (req, res)=>{
         //    res.json('logged in and dashboard is here ' + req.user.accNo+ ' ' +req.user.fullname + parseInt(userDeposit) +''+ data)
         });
     } catch(err){
+        redirect('/500');
         console.log(err.message);
     }
 })
@@ -88,6 +89,7 @@ router.post('/signup', async(req, res)=>{
             });
         })
     } catch(err){
+        redirect('/500');
         console.log(err.message)
     }
 })
