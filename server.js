@@ -70,6 +70,11 @@ app.use('/client', clientRoutes)
 app.use('/deposit', depositRoutes)
 
 //Handle missing routes
+app.get('/500', (req, res)=>{
+    res.render('500', {page: 'Something went wrong'});
+  })
+
+//Handle missing routes
 app.get('*', (req, res)=>{
-    res.render('404');
+    res.render('404', {page: 'Page not found'});
   })
