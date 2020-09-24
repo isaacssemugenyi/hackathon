@@ -17,6 +17,6 @@ block content
                         each deposit in deposits
                             tr
                                 td #{moment(deposit.createdAt).format("DD-MM-YYYY")}
-                                td #{moment(deposit.createdAt).format("hh:MM A")}
-                                td= deposit.amount
+                                td #{moment(deposit.createdAt).format("hh:mm A")}
+                                td #{deposit.amount}
 
