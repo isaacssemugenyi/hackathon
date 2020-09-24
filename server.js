@@ -71,5 +71,5 @@ app.use('/deposit', depositRoutes)
 
 //Handle missing routes
 app.get('*', (req, res)=>{
-    res.render('error');
+    res.render('404');
   })
