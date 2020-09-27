@@ -31,11 +31,6 @@ router.get('/dashboard', isAuth, async (req, res)=>{
             if (savings === null || savings === "" || savings === []){
               userDeposit = 0;
             } else {
-            //   userDeposit = savings
-            //         .filter(saving => saving.reference === req.user.id)
-            //         .map(saved => parseInt(saved.amount))
-            //         .reduce((total, amount) => total + amount, 0);
-
             data = savings.filter(saving => saving.reference === req.user.id)
             userDeposit = data.map(saved => parseInt(saved.amount))
                             .reduce((total, amount) => total + amount, 0);
