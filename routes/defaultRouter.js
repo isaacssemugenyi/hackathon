@@ -11,6 +11,11 @@ router.get('/plan', (req, res)=>{
 })
 
 // Under development route
+router.get('/teamtime', (req, res)=>{
+    res.render('teamtime', {page: 'Team Time'})
+})
+
+// Under development route
 router.get('/develop', (req, res)=>{
     res.render('develop', {page: 'Coming soon'})
 })
