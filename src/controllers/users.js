@@ -19,13 +19,9 @@ exports.UserController = {
         try {
             const response = await UserModel.create({
                 fullname:  req.body.fullname,
-                username:req.body.username,
                 email:req.body.email,
-                bank: req.body.bank,
-                accNo: req.body.accNo,
                 password: hashedPassword,
-                mobile: req.body.mobile,
-                gender: req.body.gender
+                mobile: req.body.mobile
                
             });
             return res.json({response:response._id});
