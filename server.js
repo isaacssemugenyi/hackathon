@@ -10,21 +10,20 @@ app.use(cors());
 (async()=>{
     await mongoose.connect(process.env.DB_CONNECTION, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false, 
+    useUnifiedTopology: true
     
-},
-() => console.log('connected')
-)
+}).then(() => {
+    console.log("Connected successfully")
+    app.listen(PORT, ()=>{
+        console.log(`Server is running on port ${PORT}`);
+    })
+})
 })()
+
 
 
 const PORT = process.env.PORT || 3000;
 
 require('./src/index')(app)
-
-app.listen(PORT, ()=>{
-    console.log(`Server is running on port ${PORT}`);
-})
 
 module.exports = app;

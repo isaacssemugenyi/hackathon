@@ -2,7 +2,10 @@ const { Schema, model } = require('mongoose');
 
 const PaymentSchema = new Schema({
     amount: {type: Number, required: true },
-    reference: {type: String, required: true },
+    userId: {
+        type: Schema.Types.ObjectId,        
+        ref: 'User'
+    },
     createdAt: {type: Date, required: true } 
 })
 

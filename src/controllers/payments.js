@@ -4,25 +4,30 @@ const { emailSending } = require('../config/email')
 exports.PaymentController = {
     async getpayments(req, res) {
         try {
-            const payment = await PaymentModel.find();
+            const payment = await PaymentModel.find({userId:req.params.userId}).populate("userId",["fullname", "mobile" ]);
             return res.json(payment);
         } catch(err){
             throw new Error("Failed to get products");
         }
     },
     async createNewPayment(req, res) {
-        const payment = new Payment();
-        payment.amount = req.body.amount;
-        payment.reference = req.user.id;
-        payment.createdAt = Date.now();
-       
+        console.log(req.body)
         try {
-            emailSending(req.user.email, req.user.accNo, `You have deposited ${req.body.amount} EUR to your account : ${req.user.accNo}`);
-            await payment.save();
-            return res.json(payment);;
-            //res.redirect('/dashboard'); 
+            // await emailSending(req.user.email, req.user.accNo, `You have deposited ${req.body.amount} EUR to your account : ${req.user.accNo}`)
+        
+            const newPayment = await PaymentModel.create({
+                
+                amount: req.body.amount,
+                userId: req.body.userId,
+                createdAt: Date.now()
+            })
+            // const result = await PaymentModel.findOne({userId:newPayment.userId}).populate('userId', ['fullName']);
+            return res.status(201).json({
+                status: 1,
+                payment: newPayment
+            });
         } catch(err){
-            throw new Error("Failed to make a deposit");
+            res.status(200).json({status: 0, message: err.message });
 
         }
     },
