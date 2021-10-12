@@ -1,5 +1,7 @@
 const UserModel = require('../models/users')
+
 const bcrypt = require('bcrypt');
+const jwt=require('jsonwebtoken')
 
 
 exports.UserController = {
@@ -21,12 +23,13 @@ exports.UserController = {
                 email:req.body.email,
                 bank: req.body.bank,
                 accNo: req.body.accNo,
-                password: req.body.password,
+                password: hashedPassword,
                 mobile: req.body.mobile,
                 gender: req.body.gender
                
             });
             return res.json({response:response._id});
+            console.log(response)
         } catch(err){
             console.log(err)
             throw new Error("Failed to post users");
@@ -51,22 +54,54 @@ exports.UserController = {
     //     }
     // },
 
+
+
     async loginUser(req, res) {
         try {
-            const user = await UserModel.findOne({email:req.body.email});
-            if(!user){
-            return res.json({message: 'Email not found'});   
-            }
-            //correct password
-            const validPass = await bcrypt.compare(req.body.password, user.password);
-            if(!validPass) return res.status(400).send('Invalid Password');   
-                
-                res.send("logged in")
+            //valid email
+            const user= await UserModel.findOne({email: req.body.email});
+            if(!user)
+            return res.json({message: 'Invalid Email'});
+            //valid password
+            const validpass = await bcrypt.compare(req.body.password,user.password);
+            if(!validpass)
+            return res.json({message: 'Invalid password'});
+            
+            //create and assign jwt
+            const token = jwt.sign({_id:user._id}, process.env.TOKEN_SECRET)
+            res.header('authentication_token', token);
+            res.send(token);
         
         } catch(err){
-           console.log(err) 
-            throw new Error("Failed to login user");
+            console.log(err)
+            // throw new Error("Failed to login user");
         }
     }
-
 }
+
+
+
+
+
+
+
+
+//     async loginUser(req, res) {
+//         try {
+//             const user = await UserModel.findOne({email:req.body.email});
+//             if(!user){
+//             return res.json({message: 'Email not found'});   
+//             }
+//             //correct password
+//             const validPass = await bcrypt.compare(req.body.password, user.password);
+//             if(!validPass) return res.status(400).send('Invalid Password');   
+                
+//                 res.send("logged in")
+        
+//         } catch(err){
+//            console.log(err) 
+//             throw new Error("Failed to login user");
+//         }
+//     }
+
+// }
